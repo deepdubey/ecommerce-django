@@ -1,0 +1,45 @@
+{% include "shop/base.html" %}
+{% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'cart/css/cart_page.css' %}" type="text/css">
+  {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+  {% endif %}
+  <div class="cart-container">
+    <div class="my-cart">
+      <h1>MY CART</h1>
+    </div>
+    <div class="product">
+      {% for items in cart_product %}
+        <div class="epd">
+
+          <div class="img-div">
+            <img src="{{ items.pr_logo }}" alt="{{ items.pr_title }}">
+          </div>
+
+          <div class="content">
+            <div class="title-div">
+              <p>{{ items.pr_title }}</p>
+            </div>
+            <div class="offer">
+              <p>Rs. {{ items.pr_price }}</p>
+              <p class="offer-view">{{ items.pr_offer }}</p>
+            </div>
+            <form action="{% url 'cart:cart_delete' items.pr_id %}" method="post">
+              {% csrf_token %}
+              <input type="submit" value="REMOVE">
+            </form>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="button-div">
+      <div class="cs-btn">
+        <a href="{% url 'shop:index' %}">Continue Shopping</a>
+      </div>
+      <div class="po-btn">
+        <a href="#">Place Order</a>
+      </div>
+    </div>
+  </div>

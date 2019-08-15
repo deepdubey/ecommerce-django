@@ -1,0 +1,22 @@
+{% include "shop/base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'shop/css/detail_page.css' %}">
+<div class="main-div">
+  <div class="img-div">
+    <img src="{{ product.pr_logo }}" alt="{{ product.pr_title }}">
+    <form action="{% url 'cart:cart_update' product.pr_id %}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="ADD TO CART">
+      <input type="submit" name="" value="BUY NOW">
+    </form>
+  </div>
+
+  <div class="title-div">
+    <h4>{{ product.pr_title }}</h4>
+    <div class="offer">
+      <p class="offer-view">{{ product.pr_offer }}</p>
+      <p>Rs. {{ product.pr_price }}</p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

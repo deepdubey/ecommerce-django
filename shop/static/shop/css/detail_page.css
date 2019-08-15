@@ -1,0 +1,16 @@
+.main-div{
+  border: 1px solid #000;
+  margin: 10px 0px auto 30%;
+  width: 600px;
+}
+.img-div{
+  margin: 10px;
+  float: left;
+}
+.clearfix{
+  clear: both;
+}
+.main-div input[type=submit]{
+  background-color: orange;
+  height: 30px;
+}

@@ -1,0 +1,24 @@
+.main-div a{
+  float: left;
+  margin: 10px 0px 0px 30px;
+  text-decoration: none;
+}
+.title-div{
+  text-align: center;
+}
+.offer p{
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+p.offer-view{
+  font-size: 15px;
+  color: #00ff00;
+}
+
+.section
+	{
+		width: 230px;
+		float: left;
+		margin: 20px 0px 0px 80px;
+		font-size: 17px;
+	}

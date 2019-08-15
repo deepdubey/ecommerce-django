@@ -1,0 +1,32 @@
+@charset "UTF-8";
+body{
+  margin: 0px;
+  padding: 0px;
+}
+.main-page{
+  margin: 0px;
+  padding: 0px;
+}
+header{
+  margin-top: 0px;
+  width: 100%;
+  height: 80px;
+  background-color: #0066ff;
+}
+header .title{
+  float: left;
+  width: 50%;
+}
+.cart{
+  padding: 50px 0px 0px 80%;
+}
+.cart a{
+  margin: 10px 0px 0px 3px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+h1{
+  margin-top: 0px;
+  padding: 20px 0px 0px 30px;
+}

@@ -1,0 +1,21 @@
+{% include "shop/base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'shop/css/index_page.css' %}">
+<div class="main-div">
+  {% for product in all_products %}
+  <div class="section">
+    <a href="{% url 'shop:detail' product.pr_id %}">
+      <div class="img-div">
+        <img src="{{ product.pr_logo }}" alt="{{ product.pr_title }}">
+      </div>
+      <div class="title-div">
+        <h4>{{ product.pr_title }}</h4>
+      </div>
+      <div class="offer">
+        <p>Rs. {{ product.pr_price }}</p>
+        <p class="offer-view">{{ product.pr_offer }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CartFlip</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'shop/css/base.css' %}">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js"
+    integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+    integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="main-page">
+      <header>
+        <div class="title">
+          <h1>CartFlip</h1>
+        </div>
+
+        <div class="cart">
+          <a href="{% url 'cart:details' %}">
+            <i class="fas fa-cart-plus"></i>
+            <a href="{% url 'cart:details' %}">Cart</a>
+          </a>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
