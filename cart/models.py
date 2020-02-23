@@ -4,7 +4,7 @@ from shop.models import Product
 class Cart(models.Model):
     pr_id=models.IntegerField(primary_key=True)
     pr_logo= models.CharField(max_length=400)
-    pr_title= models.CharField(max_length= 200)
+    pr_title= models.CharField(max_length=200)
     pr_price= models.IntegerField()
     pr_offer= models.CharField(max_length=30)
 
